@@ -258,7 +258,7 @@ transition: fade-out
 transition: fade-out
 ---
 
-# Reat 基本概念 
+# React 基本概念 
 
 ### jsx
 JSXはJavaScript XMLの略で、React要素を生成するJavaScriptの構文拡張です。JavaScript内でHTMLのようなマークアップ文法を使うことができ、UI構造と関連するロジックを一つの空間で処理することができます。
@@ -343,7 +343,7 @@ transition: fade-out
     - Stateはコンポーネント内でのみアクセス可能で、**`setState`**メソッドで更新することができます。
     - Stateが変更されると、コンポーネントは再レンダリングされます。
 ```
-iimport React, { useState } from 'react';
+import React, { useState } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0); 
@@ -372,7 +372,16 @@ transition: fade-out
 
 - ライフサイクル
   - ライフサイクルはコンポーネントの生成から消滅までの様々な段階を説明します。 各段階ごとに特定のメソッドが呼び出されます。このようなメソッドをライフサイクルメソッドと言います。
-  - 関数コンポーネントでのライフサイクル: 関数コンポーネントではuseEffectフックを使用してライフサイクルと似た機能を実装することができます。useEffectはマウント、アップデート、アンマウント時に実行できるコードを定義することができます。
+    - マウント(Mounting):
+      - constructor(): コンポーネントが最初に作成されたときに呼ばれます。
+      - render(): コンポーネントのUIを描画します。
+      - componentDidMount(): コンポーネントがDOMに追加された後に呼ばれます。データの取得や初期化処理などを行うのに適しています。
+    - アップデート(Updating):
+      - render(): コンポーネントのUIを再描画します。
+      - componentDidUpdate(): コンポーネントが更新された後に呼ばれます。状態やプロパティの変更に対する応答を処理するのに使用されます。
+    - アンマウント(Unmounting):
+    - componentWillUnmount(): コンポーネントがDOMから削除される前に呼ばれます。リソースの解放やクリーンアップなどの処理に使用されます。
+  
 
 <br><br>
 <common-slide/>
@@ -381,6 +390,26 @@ transition: fade-out
 transition: fade-out
 ---
 
+
+### StateとLifeCycle
+<br>
+
+- ライフサイクル
+  - Reactコンポーネントのライフサイクルに関するアプローチが変更されました。クラスコンポーネントの古典的なライフサイクルメソッドに代わるものとして、Hooksが導入されました。Hooksを使用することで、関数コンポーネントでも状態の管理やライフサイクルに関する処理を行うことができるようになりました。
+    - useState: 状態を管理するためのフックです。クラスコンポーネントでのthis.stateと同じように状態を管理できます。
+    - useEffect: マウント、アップデート、アンマウント時に特定の処理を行うためのフックです。クラスコンポーネントのcomponentDidMount、componentDidUpdate、componentWillUnmountに対応します。
+    - useContext: コンテクストを使用するためのフックで、コンテクスト内の値にアクセスすることができます。
+    - useReducer: useStateと同様に状態を管理するためのフックですが、より複雑な状態のロジックやアクションの管理に使用されます。
+    - useMemo: 計算結果のメモ化を行うためのフックで、コンポーネントが再レンダリングされても計算を最適化します。
+    - useCallback: コールバック関数のメモ化を行うためのフックで、コンポーネントの再レンダリング時に不必要な再生成を防ぎます。
+    - useRef: 参照を管理するためのフックで、DOM要素へのアクセスや変数の保持に使用されます。
+
+<br><br>
+<common-slide/>
+
+---
+transition: fade-out
+---
 
 ### React vs Vue
 
@@ -420,9 +449,6 @@ transition: fade-out
   - Vue: Vue 3でTypeScriptのサポートが改善されました。
   - React: TypeScriptとの互換性が高く、多くのコミュニティサポートがあります。
 
-- 生態系とコミュニティ：
-  - Vue: 強力な公式ドキュメントとツールを提供し、中国やアジア地域で非常に人気があります。
-  - React: Facebookが主導する大きなコミュニティとともに、広範なエコシステムを持っています。
 <br>
 
 <common-slide/>
