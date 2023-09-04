@@ -337,8 +337,7 @@ function App() {
 ---
 transition: fade-out
 ---
-### StateとLifeCycle
-- 状態
+# State
     - Stateはコンポーネントで管理されるデータを意味します。このデータはコンポーネントがレンダリングされる時に使用され、状態が変更されるとコンポーネントは再レンダリングされます。
     - Stateはコンポーネント内でのみアクセス可能で、**`setState`**メソッドで更新することができます。
     - Stateが変更されると、コンポーネントは再レンダリングされます。
@@ -367,10 +366,7 @@ export default Counter;
 transition: fade-out
 ---
 
-### StateとLifeCycle
-<br>
-
-- ライフサイクル
+# LifeCycle
   - ライフサイクルはコンポーネントの生成から消滅までの様々な段階を説明します。 各段階ごとに特定のメソッドが呼び出されます。このようなメソッドをライフサイクルメソッドと言います。
     - マウント(Mounting):
       - constructor(): コンポーネントが最初に作成されたときに呼ばれます。
@@ -391,10 +387,7 @@ transition: fade-out
 ---
 
 
-### StateとLifeCycle
-<br>
-
-- ライフサイクル
+# LifeCycle
   - Reactコンポーネントのライフサイクルに関するアプローチが変更されました。クラスコンポーネントの古典的なライフサイクルメソッドに代わるものとして、Hooksが導入されました。Hooksを使用することで、関数コンポーネントでも状態の管理やライフサイクルに関する処理を行うことができるようになりました。
     - useState: 状態を管理するためのフックです。クラスコンポーネントでのthis.stateと同じように状態を管理できます。
     - useEffect: マウント、アップデート、アンマウント時に特定の処理を行うためのフックです。クラスコンポーネントのcomponentDidMount、componentDidUpdate、componentWillUnmountに対応します。
@@ -404,14 +397,13 @@ transition: fade-out
     - useCallback: コールバック関数のメモ化を行うためのフックで、コンポーネントの再レンダリング時に不必要な再生成を防ぎます。
     - useRef: 参照を管理するためのフックで、DOM要素へのアクセスや変数の保持に使用されます。
 
-<br><br>
 <common-slide/>
 
 ---
 transition: fade-out
 ---
 
-### React vs Vue
+# React vs Vue
 
 - 反応性システム：
   - Vue: 宣言的なデータバインディングを使います。 dataオブジェクトの属性が変更されると自動的にビューが更新されます。
@@ -427,7 +419,7 @@ transition: fade-out
 transition: fade-out
 ---
 
-### React vs Vue
+# React vs Vue
 
 - スタイリング：
   - Vue: Single File Componentsで`<style>`タグ内にCSSを含めることができるようになりました。スコープされたCSSやCSSモジュールもサポートされます。
@@ -443,7 +435,7 @@ transition: fade-out
 transition: fade-out
 ---
 
-### React vs Vue
+# React vs Vue
 
 - タイプスクリプトをサポート：
   - Vue: Vue 3でTypeScriptのサポートが改善されました。
@@ -457,7 +449,7 @@ transition: fade-out
 transition: fade-out
 ---
 
-### React vs Vue
+# React vs Vue
 
 - React vs Composition API vs options API
 
