@@ -299,7 +299,7 @@ const element = <h1>Hello, world!</h1>;
 transition: fade-out
 ---
 
-# Reat 基本概念 
+# React 基本概念 
 
 ## コンポーネントとProps
 - コンポーネント 
@@ -324,7 +324,7 @@ const Welcome = (props) => {
 transition: fade-out
 ---
 
-# Reat 基本概念 
+# React 基本概念 
 
 ### コンポーネントとProps
 - Props 
